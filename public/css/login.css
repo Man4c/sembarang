@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 860px;
+    padding: 20px;
+}
+
+.main {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    overflow: hidden;
+    width: 800px;
+    height: 500px;
+}
+
+.main-poster {
+    flex: 1;
+    background: #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+}
+
+.main-login {
+    flex: 1;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-login h1 {
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.main-login h2 {
+    color: #666;
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.class-input {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.class-input input {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.class-input input:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+.class-input #password {
+    margin-bottom: -4px;
+}
+
+.show-password {
+    display: flex;
+    align-items: center;
+    margin-top: 1px;
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+.show-password input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.btn button {
+    width: 100%;
+    padding: 10px;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn button:hover {
+    background: #357abd;
+}
+
+.register {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.register p {
+    color: #666;
+    font-size: 14px;
+}
+
+.register a {
+    color: #666;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .main-poster {
+        height: 200px;
+    }
+
+    .main-login {
+        padding: 30px 20px;
+    }
+}

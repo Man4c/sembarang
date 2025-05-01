@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* -----------------ROOT VARIABLES----------------- */
+:root {
+    --color-primary: #7380ec;
+    --color-danger: #ff7782;
+    --color-success: #41f1b6;
+    --color-warning: #ffbb55;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #e4e9f7;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-primary-variant: #111e88;
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+
+    --card-border-radius: 1rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow:* 0 2rem 3rem var(--color-light);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background: #f0f0f0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+/* ==================== START SIDEBAR ==================== */
+.sidebar {
+    background-color: white;
+    height: 100vh;
+    width: 20%;
+}
+
+.main-sidebar {
+    border-bottom: 1px solid #e4e6eb;
+    height: 51.5%;
+}
+
+.main-sidebar .content {
+    padding: 16px;
+}
+
+.sidebar .top .logo {
+    height: 28px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.sidebar .top .logo img {
+    height: 34px;
+    margin-left: 4px;
+}
+
+.sidebar .top .logo h2 {
+    border: none;
+    font-size: 20px;
+}
+
+.sidebar .main-con {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.sidebar .main-con .active {
+    background: #f0f6ff;
+    color: #4468eb;
+    text-decoration: none;
+}
+
+.sidebar .main-con .active:hover {
+    background: #f0f6ff;
+    color: #4468eb;
+    text-decoration: none;
+}
+
+.sidebar .main-con a {
+    height: 45px;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 11px;
+    display: flex;
+    align-items: center;
+    color: #4c5663;
+    gap: 16px;
+}
+
+.sidebar .main-con a:hover {
+    height: 45px;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 11px;
+    display: flex;
+    align-items: center;
+    background: #f7f9fa;
+    gap: 16px;
+}
+
+.sidebar .main-con a i {
+    font-size: 16px;
+}
+
+.sidebar .main-con a h3 {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.container-a {
+    height: 290px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.btn-logout a {
+    display: flex;
+    align-items:flex-end;
+    gap: 8px;
+    color: #4c5663;
+}
+
+.btn-logout a i {
+    font-size: 16px;
+    margin-left: 60px;
+}
+
+.btn-logout a h3 {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+/* ==================== END SIDEBAR ==================== */
+
+/* ==================== START MAIN CONTENT TOP ==================== */
+
+.main-content {
+    width: 100%;
+    height: 100vh;
+    background: #f7f9fa;
+    border-left: 1px solid #e4e6eb;
+}
+
+.main-content .header {
+    background: white;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e4e6eb;
+}
+
+.main-content .header .profile {
+    height: 40px;
+    margin-right: 26px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-content .header .profile .top {
+    font-size: 14px;
+}
+
+.main-content .header span {
+    font-weight: 600;
+}
+
+.main-content .header .role {
+    display: flex;
+    justify-content: end;
+    font-size: 12px;
+}
+
+.main-content .header .profile .foto-profil i {
+    font-size: 22px;
+    border-radius: 50px;
+    background: #f0f6ff;
+    border: 1px solid rgb(255, 225, 225);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content .header h2 {
+    margin-left: 16.5px;
+    font-size: 20px;
+}
+
+/* search add button */
+.search-add-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.form-groupp  {
+    display: flex;
+    gap: 10px;
+}
+
+.form-groupp select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease-in-out;
+    width: 220px;
+}
+
+.form-groupp select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.form-groupp button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+/* search add button */
+
+/* ============== END MAIN CONTENT TOP ============== */
+
+/* ============== START MAIN RIWAYAT ============== */
+
+.main-riwayat {
+    border-radius: 20px;
+    padding: 16px;
+}
+
+.main-riwayat .judul h3 {
+    margin-bottom: 10px;
+    font-size: 26ppx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.body-top .btn-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    width: 110px;
+    color: white;
+    background: #ff0000;
+    border-radius: 8px;
+    margin-right: 24px;
+}
+
+.btn-add a {
+    color: white;
+}
+
+.main-content .main-body .table-container table {
+    background: var(--color-white);
+    width: 100%;
+    border: 1px solid #e4e6eb;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    text-align: center;
+    transition: transform 0.1s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* .main-content .main-body .table-container table:hover {
+    transform: scale(1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.101);
+} */
+
+.main-content table thead th {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.table-container table tbody td {
+    height: 2.8rem;
+    border-bottom: 1px solid var(--color-light);
+    color: var(--color-dark-variant);
+    font-size: 14px;
+}
+
+.table-container table tbody tr:last-child td {
+    border: none;
+}
+
+.table-container table tbody td {
+    height: 2.8rem;
+    border-bottom: 1px solid var(--color-light);
+    color: var(--color-dark-variant);
+}
+
+.table-container table tbody .warning a {
+    color: var(--color-warning);
+}
+
+.table-container table tbody .primary a {
+    color: var(--color-primary);
+}
+
+.btn-konfirmasi.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* ============== END MAIN RIWAYAT ============== */
+
+/* ============== START FORM PESANAN ============== */
+
+.pembungkus {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-header h1 {
+    color: #1a73e8;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: #1a73e8;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    flex: 1;
+}
+
+.btn-primary {
+    background-color: #1a73e8;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1557b0;
+}
+
+.btn-secondary {
+    background-color: #f1f3f4;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background-color: #e8eaed;
+}
+
+.btn-delete {
+    background-color: #ffffff; /* Warna latar belakang */
+    border: none; /* Tanpa border */
+    color: white; /* Warna teks */
+    padding: 8px 16px; /* Jarak teks dengan batas */
+    text-align: center; /* Perataan teks */
+    text-decoration: none; /* Tanpa underline */
+    display: inline-block; /* Tampil dalam satu baris */
+    font-size: 14px; /* Ukuran font */
+    border-radius: 4px; /* Sudut melengkung */
+    cursor: pointer; /* Pointer saat dihover */
+}
+
+.btn-delete:hover {
+    background-color: #ffffff; /* Warna latar belakang saat dihover */
+}
+
+/* ============== SCROLL FORM PESANAN ============== */
+.form-scroll {
+    max-height: 400px; /* Tinggi maksimal container form */
+    overflow-y: auto; /* Aktifkan scroll vertikal */
+    padding-right: 10px; /* Tambahkan sedikit padding untuk scrollbar */
+}
+
+/* Tambahkan gaya opsional untuk scrollbar (modern browser support) */
+.form-scroll::-webkit-scrollbar {
+    width: 6px; /* Lebar scrollbar */
+}
+
+.form-scroll::-webkit-scrollbar-thumb {
+    background-color: #888; /* Warna scrollbar */
+    border-radius: 3px;
+}
+
+.form-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Warna saat hover */
+}
+
+
+/* print */
+@media print {
+    /* Sembunyikan elemen yang tidak perlu */
+    .sidebar, .header, .btn, .search-add-container {
+        display: none;
+    }
+
+    /* Tampilkan hanya tabel laporan */
+    .table-container {
+        margin: 0;
+        padding: 0;
+    }
+}
